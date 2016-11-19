@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.keyboardHook1 = new ScanCodeChecker.KeyboardHook();
             this.SuspendLayout();
             // 
             // label1
@@ -73,6 +74,10 @@
             this.textBox2.TabIndex = 3;
             this.textBox2.TabStop = false;
             // 
+            // keyboardHook1
+            // 
+            this.keyboardHook1.KeyboardHooked += new ScanCodeChecker.KeyboardHookedEventHandler(this.keyboardHook1_KeyboardHooked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -90,7 +95,6 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "ScanCodeChecker";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +106,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private ScanCodeChecker.KeyboardHook keyboardHook1;
     }
 }
 
